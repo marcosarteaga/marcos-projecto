@@ -1,5 +1,6 @@
 <html>
   <head>
+    <script type="text/javascript" src="girarcarta.js"></script>
     <title></title>
   </head>
 
@@ -64,18 +65,24 @@
     echo"<link href='estilos-quien-es-quien.css' type='text/css' rel='stylesheet' >";
     $cartaoculta = $arrayGeneral2[0];
     $img = $arrayGeneral2;
-    $div = ['div1','div2','div3','div4','div5','div6','div7','div8','div9','div10','div11'];
+
+    $arrayDiv = [];
+    $divs=range(1,12);
+    shuffle($divs);
+    foreach ($divs as $valor) {
+      array_push($arrayDiv,"div".$valor);
+    }
+    $id=['id1','id2','id3','id4','id5','id6','id7','id8','id9','id10','id11','id12'];
     
-    echo "<table>";
+    
     $i=0;
     foreach ($img as $fotos) {
       if( substr($fotos,-3)=="jpg" or substr($fotos,-3)=="png" or substr($fotos,-4)=="jpeg"){
-        if ($cartaoculta!=$fotos){
-          echo "<div class=$div[$i]>";
-          echo "<img src='imagenes/$fotos' width='120' height='120'>";
-          echo "</div>";
-          $i=$i+1;
-        }else{
+        echo "<div class=$arrayDiv[$i]>";
+        echo "<img id=$id[$i] onclick='girar()' src='imagenes/$fotos' width='120' height='120'>";
+        echo "</div>";
+        $i=$i+1;
+        if ($cartaoculta==$fotos) {
           echo "<div class='divoculta'>";
           echo "<img src='imagenes/$fotos' width='150' height='150'>";
           echo "</div>";

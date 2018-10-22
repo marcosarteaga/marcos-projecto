@@ -8,10 +8,10 @@
 <body>
 	
 	<?php
-	echo "<img id='id1'src='mario.jpeg' onclick='girar()'>";
-
-
-
+	echo "<div id='id1'>";
+	echo "<img src='mario.jpeg'>";
+	echo "</div>";
+	echo "<p id='p1'>hola1<p>";
 	?>
 </body>
 </html>
