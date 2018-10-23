@@ -8,19 +8,22 @@
 <body>
 	
 	<?php
-<<<<<<< HEAD
-	echo "<img id='id1'src='mario.jpeg'>";
-	echo "<p id='p1'>HOLA 1</p>";
-=======
-	echo "<div id='id1'>";
-	echo "<img src='mario.jpeg'>";
-	echo "</div>";
-	echo "<p id='p1'>hola1<p>";
->>>>>>> dcd0ac77be23ab2565747b35b4111d7513ca3396
+	echo "
+	<div id='id1' class='card' >
+    	<div><img src='mario.jpeg'></div>
+    	<div class='back'><img src='reverso.png'></div>
+  	</div>
+	";
+
+	echo "
+	<div id='id1' class='card2' >
+    	<div><img src='mario.jpeg'></div>
+    	<div class='back'><img src='reverso.png'></div>
+  	</div>
+	";
+
+
 	?>
-</body>
-	<img id='id1'src='mario.jpeg'>
-	<p id='p1'>HOLA 1</p>
 
 </html>
 

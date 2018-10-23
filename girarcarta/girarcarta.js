@@ -1,18 +1,8 @@
-function girar(){
-<<<<<<< HEAD
-	document.getElementById('id1').addEventListener('click',pp,false);
-	}
+document.getElementById('id1').addEventListener('click',girarcarta);
 
-function pp(){
-	document.getElementById('p1').innerHTML = "hola mundo";
 
-=======
-	document.getElementById("id1").addEventListener("click",escribir);
-	}
+function girarcarta(){
+	document.getElementById('id1').classList.add('flipped');
 
-function escribir(){
-	document.getElementById("p1").innerHTML = "HOLA2";
->>>>>>> dcd0ac77be23ab2565747b35b4111d7513ca3396
 }
-
 
