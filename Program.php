@@ -1,6 +1,7 @@
 <html>
   <head>
-    <script type="text/javascript" src="girarcarta.js"></script>
+    <script type="text/javascript" src="efectogirar.js"></script>
+    <link href='estilos-quien-es-quien.css' type='text/css' rel='stylesheet' >
     <title></title>
   </head>
 
@@ -62,7 +63,6 @@
     foreach ($numeros as $value) {
       array_push($arrayGeneral2, $arrayGeneral[$value][0]);
     }
-    echo"<link href='estilos-quien-es-quien.css' type='text/css' rel='stylesheet' >";
     $cartaoculta = $arrayGeneral2[0];
     $img = $arrayGeneral2;
 
@@ -80,7 +80,7 @@
     $i=0;
     foreach ($img as $fotos) {
       if( substr($fotos,-3)=="jpg" or substr($fotos,-3)=="png" or substr($fotos,-4)=="jpeg"){
-        echo "<div id='$arrayId[$i]' class='$arrayDiv[$i]'>";
+        echo "<div id='$arrayId[$i]' onclick='girar(this.id)' class='$arrayDiv[$i]'>";
         echo "<div><img src='imagenes/$fotos' width='120' height='120'></div>";
         echo "<div class='back'><img src='imagenes2/reversos.jpg' width='120' height='120'></div>";
         echo "</div>";
@@ -94,39 +94,5 @@
     }
     }
     ?>
-    <form action="#" method="post">
-      <div class="general">
-      <div class="caja1">
-        <p id="cabello">Cabello</p>
-        <select name="OptCabello[]">
-          <option value="Seleciona">Selecciona</option>
-          <option value="Rubio">Rubio</option>
-          <option value="Moreno">Moreno</option>
-          <option value="Castany">Castany</option>
-        </select>
-      </div>
-      <div class="caja2">
-        <p id="gafas">Gafas</p>
-        <select name="OptGafas[]">
-          <option value="Seleciona">Selecciona</option>
-          <option value="Si">Si</option>
-          <option value="No">No</option>
-        </select>
-      </div>
-      <div class="caja3">
-        <p id="sexe">Sexo</p>
-        <select name="OptSexo[]">
-          <option value="Seleciona">Selecciona</option>
-          <option value="Hombre">Hombre</option>
-          <option value="Mujer">Mujer</option>
-        </select>
-      </div>
-    </div>
-    </form>
-    <div class="boton">
-    <input type="submit" name="enviar" value="Enviar"/>
-    </div>
-
-  </div>
   </body>
 </html>
