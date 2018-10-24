@@ -86,8 +86,9 @@
         echo "</div>";
         $i=$i+1;
         if ($cartaoculta==$fotos) {
-          echo "<div class='divoculta'>";
-          echo "<img src='imagenes/$fotos' width='150' height='150'>";
+          echo "<div id='id13' class='divoculta'>";
+          echo "<div><img src='imagenes2/reversos.jpg' width='120' height='120'></div>";
+          echo "<div class='back'><img src='imagenes/$fotos' width='150' height='150'></div>";
           echo "</div>";
         }
     }
