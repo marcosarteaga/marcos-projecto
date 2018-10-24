@@ -15,14 +15,23 @@ while (!feof ($archivo)) {
     	$num_lineas++;
    }
 }
-fclose ($archivo);
+asort($arrayMarcador);
+
 echo "
 Líneas: " . $num_lineas;
+fclose ($archivo);
 
-for ($i=0; $i < $num_lineas ; $i++) { 
-	echo $arrayMarcador[0];
+echo "<br>";
+print_r($arrayMarcador);
+echo "<table border=1 height='200' width='400'>";
+$arrayjugadores=explode(" ", $arrayMarcador[0]);
+print_r($arrayjugadores);
+foreach ($arrayMarcador as $value) {
+	echo "<tr>";
+	echo "<td>$value</td>";
+	echo "</tr>";
 }
-
+echo "</table>";
 ?> 
 
 
