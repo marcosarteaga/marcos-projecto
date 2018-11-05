@@ -1,7 +1,8 @@
 function pedirnombre() {
 	var person = prompt("Introduce tu nombre", "Nombre");
-	var puntos = 10;
-	window.location.href ="?w1=" +puntos+" "+person; 
+	var puntos = 2000;
+	window.location.href ="?w1=" +puntos+"&w2="+person; 
+	/*window.location.href ="w1?"+puntos&"w2="+person;*/ 
 
 
     
