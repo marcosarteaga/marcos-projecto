@@ -94,6 +94,9 @@
     }
     }
     }
+
     ?>
+    <button onclick="tiempo()" id="b1">Pregunta</button>
+    <p id="p1"></p>
   </body>
 </html>

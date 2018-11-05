@@ -1,15 +1,16 @@
-function girar(id){
-	document.getElementById(id).addEventListener('click',girarcarta);
-	girarcarta(id);
-}
+function pedirnombre() {
+	var person = prompt("Introduce tu nombre", "Nombre");
+	var puntos = 10;
+	window.location.href ="?w1=" +puntos+" "+person; 
 
 
-function girarcarta(id2){
-	document.getElementById(id2).classList.add('flipped');
-
-}
-
-function myFunction() {
-    var person = prompt("Introduce tu nombre", "Nombre");
     
+}
+
+function confirmar(){
+	var mensaje = confirm("¿Quieres guardar tu puntuación?");
+	if (mensaje) {
+		pedirnombre();
+
+	}
 }
