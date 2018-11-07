@@ -16,31 +16,24 @@ fclose ($archivo);
 
 
 $lineas;
-$arrayMarcador=[];
 $archivo = fopen ("marcador.txt", "r");
-while ($lineas = fgets($archivo)) {
-	$nom=explode(" ",$lineas);
-	$clave=$nom[1];
-	$valor=$nom[0];
-	$cv=array($clave);
-	$av=array_fill_keys($cv,$valor);
-	array_push($arrayMarcador,array_fill_keys($cv,$valor));
-}
-print_r($av);
+$arrayMarcador=file("marcador.txt");
 
+print_r($arrayMarcador);
 
-asort($arrayMarcador);
+sort($arrayMarcador);
+
 echo "<table border=1 height='200' width='400'>";
+echo "<tr><td>RANKING DE MEJORES JUGADORES</td></tr>";
 foreach ($arrayMarcador as $value) {
 	echo "<tr>";
 	echo "<td>$value</td>";
 	echo "</tr>";
 }
 echo "</table>";
-
+echo "<p id='p2'>fsdfsd</p>";
+echo "<button onclick='zero()'>zero</button>";
 
 ?> 
-
-
 </body>
 </html>
